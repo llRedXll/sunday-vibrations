@@ -1,0 +1,77 @@
+:root {
+  --yellow: hsla(37, 100%, 63%, 1);
+  --ghost: hsla(260, 43%, 97%, 1);
+  --grey: hsla(137, 3%, 52%, 1);
+  --coffee: hsla(327, 7%, 25%, 1);
+  --black: hsla(0, 0%, 15%, 1);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Syncopate', sans-serif;
+  background-color: var(--black);
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 3rem;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav img {
+  height: 8rem;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav li {
+  list-style: none;
+  font-size: 1.4rem;
+  margin-right: 7rem;
+  color: var(--ghost);
+}
+
+.livestream {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 2.5rem;
+  padding-top: 56.25%;
+  /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.livestream iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=style.css.map */

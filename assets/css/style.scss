@@ -1,0 +1,65 @@
+:root {
+    --yellow: hsla(37, 100%, 63%, 1);
+    --ghost: hsla(260, 43%, 97%, 1);
+    --grey: hsla(137, 3%, 52%, 1);
+    --coffee: hsla(327, 7%, 25%, 1);
+    --black: hsla(0, 0%, 15%, 1);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    //this defines what 1rem is
+    font-size: 62.5%; //1rem = 10px: 10px/16px = 62.5%
+    font-family: 'Syncopate', sans-serif;
+    background-color: var(--black);
+}
+
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    & img {
+        height: 8rem;
+    }
+    & ul {
+       display:flex;
+    }
+    & li {
+        list-style: none;
+        font-size: 1.4rem;
+        margin-right: 7rem;
+        color: var(--ghost);
+    }
+}
+
+.livestream {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 2.5rem;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+
+    & iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
