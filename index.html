@@ -23,15 +23,12 @@
     <link rel="icon" type="image/png" sizes="96x96" href="assets/images/sunday-vibrations.ico/favicon-96x96.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/sunday-vibrations.ico/favicon-16x16.png" />
 
-    <title>Sunday Vibrations | Jivetribe Networx</title>
+    <title>Sunday Vibrations</title>
   </head>
   <body>
     <nav>
       <a href="#">
-        <img
-          src="assets/images/sunday-vibrations-logo.svg"
-          alt="Sunday Vibrations Logo"
-        />
+        <img src="assets/images/sunday-vibrations-logo.svg" data-fallback="assets/images/sunday-vibrations-logo.png" alt="Sunday Vibrations Logo"/>
       </a>
       <ul>
         <li>About</li>
@@ -42,13 +39,23 @@
 
     <main>
       <section class="livestream">
-        <iframe src="https://player.twitch.tv/?channel=groovecruise&parent=llredxll.github.io&parent=127.0.0.1" frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
-      </section>
-
-      <section class="chat">
-
+        <!-- Add a placeholder for the Twitch embed -->
+        <div id="twitch-embed"></div>
+        <!-- <iframe src="https://player.twitch.tv/?channel=sundayvibrationslive&parent=llredxll.github.io&parent=127.0.0.1" frameborder="0" allowfullscreen="true" scrolling="no" layout="video-with-chat"></iframe> -->
       </section>
     </main>
-
+    <!-- Load the Twitch embed script -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 854,
+        height: 480,
+        channel: "jespinosa",
+        // only needed if your site is also embedded on embed.example.com and othersite.example.com 
+        parent: ["llredxll.github.io", "127.0.0.1"]
+      });
+    </script>
   </body>
 </html>
