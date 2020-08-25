@@ -19,6 +19,8 @@ html {
     font-size: 62.5%; //1rem = 10px: 10px/16px = 62.5%
     font-family: 'Syncopate', sans-serif;
     background-color: var(--black);
+    scroll-behavior: smooth;
+
 }
 
 body {
@@ -31,20 +33,46 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-
     & img {
         height: 8rem;
     }
     & ul {
        display:flex;
        display: hidden;
+
+       & a {
+           text-decoration: none;
+       }
+    //    & a:hover {
+    //        color: var(--yellow);
+    //    }
     }
     & li {
         list-style: none;
         font-size: 1.4rem;
         margin-right: 7rem;
         color: var(--ghost);
+        transition: all .3s;
     }
+
+    & li:hover {
+        color: var(--yellow);
+    }
+}
+
+#about {
+    height: 100vh;
+    background-color: var(--coffee);
+}
+
+#schedule {
+    height: 100vh;
+    background-color: var(--grey);
+}
+
+#djs {
+    height: 100vh;
+    background-color: var(--ghost);
 }
 
 .livestream {
