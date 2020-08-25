@@ -25,13 +25,18 @@ html {
 
 body {
     box-sizing: border-box;
-    padding: 3rem;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 3rem;
+    left: 3rem;
+    right: 0;
+    margin-bottom: 5rem;
+    z-index: 5;
 
     & img {
         height: 8rem;
@@ -72,15 +77,16 @@ nav {
 
 #djs {
     height: 100vh;
-    background-color: var(--ghost);
+    background-color: var(--black);
 }
 
 .livestream {
     position: relative;
     overflow: hidden;
     width: 100%;
-    margin-top: 2.5rem;
+    margin-top: 14.5rem;
     padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    z-index: 10;
 
     & iframe {
         position: absolute;
